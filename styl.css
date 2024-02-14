@@ -1,0 +1,20 @@
+h1{
+    text-align: center;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#nie{
+    float: left;
+    width: 50%;
+}
+#tak{
+    width: 50%;
+    float: left;
+    text-align: right;
+}
+#nowy{
+    text-align: center;
+}

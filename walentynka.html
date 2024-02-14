@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="styl.css">
+    <title>Walentynka</title>
+</head>
+<body>
+
+ <h1>Czy zostaniesz moją walentynką?</h1>
+ <img src="serce.png" height="100px">
+ <p id="nowy"></p>
+ <div id="tak" style="   width: 50% ">
+ <input id="guziktak" type="button" value="TAK" onclick='tak()' style="height: 100px; width: 150px; background-color: red;"></div>
+ <div id="nie" style="   width: 50%">
+ <input id="guziknie" type="button" value="NIE" onclick="nie()" style="height: 100px; width: 150px; background-color: green;"></div>
+ 
+ <script>
+    function tak(){
+document.getElementById("tak").remove();
+document.getElementById("nie").remove();
+document.getElementById("nowy").innerHTML="<h1>Jupi</h1>";
+    }
+    let i=0;
+    let h=100;
+    let h1=100;
+    let w=150;
+    let w1=150;
+    function nie(){
+      i++;
+      if(i>10){
+    return;}
+    dh=h/100*33;
+    dw=w/100*33;
+      h=h+dh;
+      w=w+dw;
+   dh1=h1/100*10;
+   dw1=w1/100*10;
+      h1=h1-dh1;
+      w1=w1-dw1;
+
+document.getElementById('guziktak').style.height=h+"px";
+document.getElementById('guziktak').style.width=w+"px";
+document.getElementById('guziknie').style.height=h1+"px";
+document.getElementById('guziknie').style.width=w1+"px";
+     switch (i){
+        case 1:
+            document.getElementById('nowy').innerHTML="jesteś pewna?";
+            break;
+            case 2:
+            document.getElementById('nowy').innerHTML="na pewno?";
+            break;
+            case 3:
+            document.getElementById('nowy').innerHTML="na 100%?";
+            break;
+            case 4:
+            document.getElementById('nowy').innerHTML="proszę?";
+            break;
+            case 5:
+            document.getElementById('nowy').innerHTML="ale pomyśl o tym";
+            break;
+            case 6:
+            document.getElementById('nowy').innerHTML="jak powiesz nie będę smutny";
+            break;
+            case 7:
+            document.getElementById('nowy').innerHTML="będę bardzo smutny";
+            break;
+            case 8:
+            document.getElementById('nowy').innerHTML="będę bardzo bardzo smutny";
+            break;
+            case 9:
+            document.getElementById('nowy').innerHTML="PROSZĘ POWIEDZ TAK";
+            break;
+            case 10:
+            document.getElementById('nowy').innerHTML="Poddaje się";
+            document.getElementById("tak").remove();
+            break;
+     }
+
+
+    }
+ </script>
+</body>
+</html>
